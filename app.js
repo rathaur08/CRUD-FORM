@@ -13,6 +13,7 @@ connectDB(DATABASE_URL);
 
 // Static Files
 app.use('/student',express.static(join(process.cwd(), "public")))
+app.use('/student/edit',express.static(join(process.cwd(), "public")))
 
 // Set Template Engine
 app.set("view engine", "ejs");

@@ -35,16 +35,21 @@
                       </tr>
                     </thead>
                     <tbody>
+
+                    <% let i=1  %>
+                    <% data.forEach((item)=>{ %> 
                       <tr>
-                        <th>1</th>
-                        <td>Sunny Rathaur</td>
-                        <td>23</td>
-                        <td>20000</td>
+                        <th> <%= i++ %> </th>
+                        <td> <%= item.name  %> </td>
+                        <td> <%= item.age  %> </td>
+                        <td> <%= item.fees  %> </td>
                         <td>
                             <button type="update" class="btn btn-warning">UP</button>
                             <button type="delete" class="btn btn-danger">DEL</button>
                         </td>
                       </tr>
+                    <% }) %> 
+
                     </tbody>
                   </table>
             </div>

@@ -44,8 +44,14 @@
                         <td> <%= item.age  %> </td>
                         <td> <%= item.fees  %> </td>
                         <td>
-                            <button type="update" class="btn btn-warning">UP</button>
-                            <button type="delete" class="btn btn-danger">DEL</button>
+                            <form action="/student/edit/<%= item._id %>" method="get" class="d-inline">
+                                <button type="update" class="btn btn-warning">UP</button>
+                            </form>
+
+                            <form action="/student/delete/<%= item._id %>" method="post" class="d-inline">
+                                <button type="delete" class="btn btn-danger">DEL</button>
+                            </form>
+
                         </td>
                       </tr>
                     <% }) %> 
